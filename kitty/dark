@@ -1,0 +1,57 @@
+font_family      monofur for Powerline
+bold_font        monofur for Powerline
+italic_font      monofur for Powerline
+bold_italic_font monofur for Powerline
+font_size 14.0
+confirm_os_window_close 0
+
+window_margin_width 20 20 0 20
+
+cursor_shape Beam
+
+allow_remote_control yes
+
+# Tabs
+tab_bar_background      	#212128
+tab_bar_edge			    bottom
+tab_bar_margin_width		0
+tab_bar_margin_height		0 0
+tab_bar_style			    fade
+tab_fade                    0 
+
+tab_title_template "{fmt.bg._212128}{fmt.fg._ff77ba} {index} {title}"
+active_tab_title_template "{fmt.bg._212128}{fmt.fg._99ffab}{index} {title}"
+
+# ColorSheme
+foreground #FFFFFF
+background #212128
+selection_foreground #ff669a
+selection_background #222220
+cursor #FAFFB3
+url_color #8be9fd
+background_opacity 1
+
+# black
+color0 #333333
+color8 #424b54
+# red
+color1 #dc9191
+color9 #dc8191
+# green
+color2  #99ffab
+color10 #89ffab
+# yellow
+color3  #f2cc8f
+color11 #f2cc7f
+# blue
+color4  #9a99ff
+color12 #8a99ff
+# magenta
+color5  #ff77ba
+color13 #ff67ba
+# cyan
+color6  #98c1d9
+color14 #88c1d9
+# white
+color7  #f6e7cb
+color15 #e8ddb5
