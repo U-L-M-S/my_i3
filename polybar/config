@@ -25,7 +25,7 @@ padding-right = 2
 module-margin-left = 2
 module-margin-right = 1
 
-font-0 = "monofur for Powerline:pixelsize=12;3"
+font-0 = "Monofur for Powerline:pixelsize=12;3"
 font-1 = "Iosevka Nerd Font:pixelsize=12;4"
 
 modules-left = menu term browser filer editor music
@@ -218,6 +218,29 @@ label-charging-foreground = ${colors.fourth}
 type = custom/script
 exec = sensors | grep "Composite" | tr -d '+' | awk '{print $2}'
 interval = 1
+
+[module/gbprate]
+type = custom/script
+exec = ~/.config/polybar/scripts/currencyrates.py gbp usd
+interval=600
+click-left = firefox --new-window "https://freecurrencyrates.com/en/exchange-rate-history/GBP-USD/2019/cbr"
+click-right = firefox --new-window "https://freecurrencyrates.com/en/convert-GBP-USD/cbr"
+
+[module/eurrate]
+type = custom/script
+exec = ~/.config/polybar/scripts/currencyrates.py eur usd
+interval=600
+click-left = firefox --new-window "https://freecurrencyrates.com/en/exchange-rate-history/EUR-USD/2019/cbr"
+click-right = firefox --new-window "https://freecurrencyrates.com/en/convert-EUR-USD/cbr"
+
+[module/btcrate]
+format = <label>
+label = %output%
+type = custom/script
+exec = ~/.config/polybar/scripts/currencyrates.py btc usd
+interval=600
+click-left = firefox --new-window "https://freecurrencyrates.com/en/exchange-rate-history/BTC-USD/2019"
+click-right = firefox --new-window "https://freecurrencyrates.com/en/convert-BTC-USD"
 
 [settings]
 screenchange-reload = true

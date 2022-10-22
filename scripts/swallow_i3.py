@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 #-----------------------------------------------
+# https://gist.github.com/windwp/b46e8bdeac793867b34d2191e66a6f44
 # used to swallow a terminal window in i3
 # Check the vide for more information: https://www.youtube.com/watch?v=_wtolb6mgLo
 # INSTALL 

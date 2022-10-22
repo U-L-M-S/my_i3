@@ -51,7 +51,6 @@ dunst &
 
 run nm-applet &
 #run volumeicon &
-flameshot &
 run polybar -c ~/.config/i3/polybar/config &
 # Set correct size for all programs
 #xrandr --dpi 84 &

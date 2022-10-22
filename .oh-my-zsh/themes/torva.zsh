@@ -29,7 +29,7 @@ get_cps_num_lock() {
 
 torva_git() {
   if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
-    echo "%F{$orange}$git %fMaster"
+    echo "%F{$orange}$git %f"
   fi
 }
 

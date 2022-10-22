@@ -8,7 +8,7 @@ set $Editor subl
 set $Menu rofi -show drun -show-icons 
 set $Filer nemo
 set $Music spotify
-set $Chat telegram
+set $Chat telegram-desktop
 
 # Window variables
 set $BorderSize 3
@@ -33,17 +33,23 @@ set $Desk2 HDMI1
 # Default font
 font pango:monofur Nerd Font Complete 14
 
+# Start swallow
+exec --no-startup-id python3 ~/.config/scripts/swallow_i3.py
+
 # Resolution monitors
 exec --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --output DP-0 --mode 1920x1080 --left-of HDMI-0
 
 # Start polybar
 exec --no-startup-id polybar -c ~/.config/polybar/config main
 
+# Start flameshot
+exec --no-startup-id flameshot
+
 # Random wallpaper
 exec --no-startup-id ~/.config/scripts/change_bk.sh
 
 # Start picom
-#exec --no-startup-id picom
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -63,7 +69,7 @@ bindsym $mod+c kill
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # Change backgrounds wallpapers by press of G6 (Keyboard)
-bindsym $mod+o exec --no-startup-id change_bk_manually.sh
+bindsym $mod+o exec --no-startup-id ~/.config/scripts/change_bk_manually.sh
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)

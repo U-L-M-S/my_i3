@@ -3,8 +3,8 @@
 # DO NOT forget to put a copy of this script in the /usr/bin/
 # Otherwise it will NOT work!!!
 
-WLPDIR1="$HOME/MEGA/wallpapers/"
-WLPDIR2="$HOME/MEGA/wallpapers/"
+WLPDIR1="$HOME/Mega/wallpapers/"
+WLPDIR2="$HOME/Mega/wallpapers/"
 
 
 files1=($WLPDIR1*)

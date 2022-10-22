@@ -9,9 +9,15 @@ alias grep='grep --color=auto'
 alias tch='touch'
 alias cd.='cd -'
 
+# open pdf files via terminal
+alias pdf='evince'
+
 # Trash-cli instead of rm
 alias rm='trash-put'
 alias undo='trash-restore'
+
+# FORCE atom to start
+alias atom='atom --no-sandbox'
 
 # Changing "ls" to "exa"
 alias lll='exa -aT --color=always --group-directories-first --icons' # tree listing
@@ -49,6 +55,7 @@ ex ()
 # VIMs
 alias v='nvim'
 alias vv='vim'
+alias sv='sudoedit'
 
 # Configs
 # Zsh

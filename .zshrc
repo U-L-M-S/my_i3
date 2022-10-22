@@ -21,6 +21,7 @@
 # torva.zsh
 # lollipop-mint.zsh
 
+
 Theme="torva.zsh"
 
 # Use tmux
@@ -33,12 +34,10 @@ Theme="torva.zsh"
 # will also be displayed if the package is installed
 # you can use the keyboard to navigate through the options and also search for a specific package
 
-# Add .local/bin to my PATH 
-export PATH="$HOME/.local/bin:$PATH"
-
 # Source plugins
 source ~/.oh-my-zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.oh-my-zsh/plugins/sudo/sudo.plugin.zsh
 # Functions
 source ~/.oh-my-zsh/functions.sh
 # Sourse prompt themes
@@ -231,3 +230,5 @@ fi
 # Show path content
 exa -1 --icons
 
+
+[ -f "/home/silcniu/.ghcup/env" ] && source "/home/silcniu/.ghcup/env" # ghcup-env
