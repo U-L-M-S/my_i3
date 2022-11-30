@@ -15,7 +15,7 @@ function run {
 }
 
 ### Start 2 monitors ###
-#xrandr --output HDMI1 --mode 1366x768 --pos 1600x0 --rotate normal --output VGA1 --primary --mode 1600x900 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+# xrandr --output HDMI-1 --mode 1920x1080 --output DP-1 --mode 1920x1080 --left-of HDMI-1
 
 ### Set keymap pt_br ###
 setxkbmap -model abnt2 -layout br -variant abnt2
@@ -35,6 +35,15 @@ else
   picom &
 fi
 
+### Restart the sctipt that changes background automatically
+if ps -C change_bk.sh; then
+  killall change_bk.sh
+  sh ~/.config/scripts/change_bk.sh &
+else
+  sh ~/.config/scripts/change_bk.sh &
+fi 
+
+
 ### Set wallpaper ###
 ### Use nitrogen
 nitrogen --restore &
@@ -49,6 +58,9 @@ nitrogen --restore &
 ### Use dunst ###
 dunst &
 
+### Start pidswallow (swallow programm)
+pgrep -fl 'pidswallow -gl' || pidswallow -gl
+
 run nm-applet &
 #run volumeicon &
 run polybar -c ~/.config/i3/polybar/config &
@@ -58,4 +70,3 @@ run polybar -c ~/.config/i3/polybar/config &
 sh ~/.config/scripts/change_bk.sh & 
 # Start Swallow script
 sh ~/.config/scripts/swallow_i3.py &
-# Start Picom with animations

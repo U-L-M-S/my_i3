@@ -8,6 +8,7 @@ alias free="free -h"
 alias grep='grep --color=auto'
 alias tch='touch'
 alias cd.='cd -'
+alias r='ranger'
 
 # open pdf files via terminal
 alias pdf='evince'
@@ -16,8 +17,12 @@ alias pdf='evince'
 alias rm='trash-put'
 alias undo='trash-restore'
 
-# FORCE atom to start
+# FORCE programms to start
 alias atom='atom --no-sandbox'
+alias binance='binance --no-sandbox'
+
+# Start sxiv with swallow
+alias sxiv='swallow sxiv'
 
 # Changing "ls" to "exa"
 alias lll='exa -aT --color=always --group-directories-first --icons' # tree listing
